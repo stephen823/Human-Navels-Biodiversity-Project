@@ -100,17 +100,18 @@ function plotbubble(xv,yv){
     x: xv,
     y: yv,
     mode: 'markers',
+    label: "#22",
     marker: {
       size: yv,
-      color: xv
+      color: xv,
     }
   };
   
   var data = [trace1];
   
   var layout = {
-    title: '',
-    showlegend: true,
+    title: 'sample value vs uto id',
+    showlegend: false,
     height: 500,
     width: 900,
     xaxis:{title:"uto id"},
