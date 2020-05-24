@@ -100,6 +100,7 @@ function plotbubble(xv,yv){
     x: xv,
     y: yv,
     mode: 'markers',
+    label: "#22",
     marker: {
       size: yv,
       color: xv,
@@ -211,6 +212,11 @@ d3.json("samples.json").then((importdata) => {var data=importdata;
       
       //initial basic information
       var info=d3.select("#sample-metadata");
+
+      var id=info.append("p");
+      id.attr("id","id");
+      id.text("id:"+metadata[0].id);
+
       var eth=info.append("p");
       eth.attr("id","ethnicity");
       eth.text("ethnicity:"+metadata[0].ethnicity);
@@ -264,6 +270,10 @@ d3.json("samples.json").then((importdata) => {var data=importdata;
 
       //Function for update info
       function updateinfo(information){
+
+        var id=d3.selectAll("#id");
+        id.text("id:"+information.id);
+
         var ethnicity=d3.selectAll("#ethnicity");
         ethnicity.text("ethnicity:"+information.ethnicity);
 
