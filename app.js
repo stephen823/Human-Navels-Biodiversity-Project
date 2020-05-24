@@ -100,7 +100,6 @@ function plotbubble(xv,yv){
     x: xv,
     y: yv,
     mode: 'markers',
-    label: "#22",
     marker: {
       size: yv,
       color: xv,
